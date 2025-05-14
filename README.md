@@ -21,4 +21,8 @@
 
 ### 각 Step 별 기능:
 step1 - html page 작성
-step2 - form 내부의 input 과 table에 CSS 추가
+step2 - form 내부의 input 과 table 에 CSS 추가
+step3 
+    - form.css 파일로 분리하기
+    - form 내부의 input에 form-group, form-grid css 추가
+    - form.css 에 form-group, form-grid 클래스 추가하기기
