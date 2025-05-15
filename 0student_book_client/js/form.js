@@ -18,9 +18,9 @@ studentForm.addEventListener("submit", function (event) {
 
     //FormData 객체생성 <form>엘리먼트를 객체로 변환
     const stuFormData = new FormData(studentForm);
-    stuFormData.forEach((value, key) => {
-        console.log(key + ' = ' + value);
-    });
+    // stuFormData.forEach((value, key) => {
+    //     console.log(key + ' = ' + value);
+    // });
 
     //사용자 정의 Student 객체생성 ( 공백 제거 )
     const studentData = {
@@ -37,7 +37,8 @@ studentForm.addEventListener("submit", function (event) {
         //검증체크 실패하면 리턴하기
         return;
     }
-
+    //유효한 데이터 출력하기
+    console.log(studentData);
 
 });
 
@@ -68,7 +69,8 @@ function validateStudent(student) {// 필수 필드 검사
         return false;
     }
     // 학번 형식 검사 (예: 영문과 숫자 조합)
-    const studentNumberPattern = /^[A-Za-z0-9]+$/;
+    //const studentNumberPattern = /^[A-Za-z0-9]+$/;
+    const studentNumberPattern = /^s\d{5}$/;
     if (!studentNumberPattern.test(student.studentNumber)) {
         alert("학번은 영문과 숫자만 입력 가능합니다.");
         return false;
